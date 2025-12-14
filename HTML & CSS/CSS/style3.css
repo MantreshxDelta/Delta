@@ -1,0 +1,26 @@
+/* div {
+    height: 200px;
+    width: 500px;
+    background-color: pink; */
+    /* border-width: 5px;
+    border-color: purple;
+    border-style: solid; */
+    /* Short form */
+    /* border: 5px solid rgb(0, 0, 0);
+    border-radius: 100px;
+    padding-top: 50px;
+    margin-bottom: 50px;
+}  */
+button {
+    font-size: 15px;
+    padding-left: 1em;
+    padding-right: 1em;
+    border: 5px solid black;
+    border-radius: 50px;
+}
+section {
+    font-size: 15px;
+}
+div {
+    font-size: 2rem;
+}
