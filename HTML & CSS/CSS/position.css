@@ -13,3 +13,15 @@ div {
     top: 100px;
     left: 100px;
 }
+#relative {
+    background-color: yellow;
+    position: relative;
+    top: 100px;
+    left: 100px;
+}
+#absolute {
+    background-color: yellow;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}
