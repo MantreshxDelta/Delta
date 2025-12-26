@@ -61,5 +61,12 @@
 // console.alert("This is an error")
 
 // Input
-let firstname = prompt("Enter your name: ");
-console.log(firstname);
+// let firstname = prompt("Enter your name: ");
+// console.log(firstname);
+
+//Replace
+// let str = "I love coding"
+// str.slice("love", "do");
+// console.log(str)
+
+let students = ["Mant", "Vikw", "Prane", "Prnav"];
