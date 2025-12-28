@@ -133,3 +133,15 @@
 // }
 
 // for of loop
+// let fruits = ['mango','apple','banana','orange','mosambi']
+// for (fruit of fruits){
+//     console.log(fruit);
+// }
+
+// Nested for of loops
+// let arr = ['gotilal', 'sandeepmuthmare']
+// for (name of arr) {
+//     for (lpw of name) {
+//         console.log(lpw);
+//     }
+// }
