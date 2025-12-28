@@ -95,3 +95,14 @@
 // }
 
 // favourite movie
+// let favourite = "KGF";
+// let guess = prompt("Enter Movie Name: ");
+// while ((guess != favourite) && (guess != "quit")) {
+//     console.log("Wrong guess");
+//     guess = prompt("Please try again");
+// }
+// if (guess = favourite) {
+//         console.log("Correct guess")
+//     }
+
+// 
