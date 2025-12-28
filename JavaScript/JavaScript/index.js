@@ -105,4 +105,31 @@
 //         console.log("Correct guess")
 //     }
 
-// 
+// Break
+// let i = 1;
+// while (i<=5){
+//     if (i==3){
+//         break;
+//     }
+//     console.log(i);
+//     i++;
+// }
+// console.log("3 Par Baat Khatam")
+
+// loops with nested arrays
+// arr = [["ramesh", "pakya", "charan"], ["superman", "batman", "ironman"]]
+// for (i=0; i<arr.length; i++) {
+//     console.log(i, arr[i], arr[i].length);
+//     for (let j=0; j<arr[i].length; j++) {
+//         console.log(`j${j}, ${arr[i][j]}`);
+//     }
+// }
+
+// arr = [['ramesh',80,'pass'], ['phool kumari',89,'fail']]
+// for (i=0; i<arr.length; i++) {
+//     for (let j=0; j<arr[i].length; j++) {
+//         console.log(arr[i][j]);
+//     }
+// }
+
+// for of loop
