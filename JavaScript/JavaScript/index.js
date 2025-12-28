@@ -69,4 +69,29 @@
 // str.slice("love", "do");
 // console.log(str)
 
-let students = ["Mant", "Vikw", "Prane", "Prnav"];
+// let students = ["Mant", "Vikw", "Prane", "Prnav"];
+
+// Loops
+// for (let i=2; i<=20; i=i+2){
+//     console.log(i);
+// }
+
+// let n = prompt("Enter your number")
+// for (i=1; i<=n; i++) {
+//     console.log(i);
+// }
+
+// for(i=1; i<=5; i++) {
+//     for (j=1; j<=5; j++){
+//         console.log(j);
+//     }
+// }
+
+// While Loop
+// let i = 0;
+// while (i<=5){
+//     console.log(i);
+//     i++;
+// }
+
+// favourite movie
