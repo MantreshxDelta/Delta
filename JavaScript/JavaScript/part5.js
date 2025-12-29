@@ -14,13 +14,32 @@
 //     Tags: 3
 // };
 
-let classinfo = {
-    Mantresh: {
-        Grade: 'A+',
+// let classinfo = {
+//     Mantresh: {
+//         Grade: 'A+',
+//         City: 'Nashik'
+//     },
+//     Vky: {
+//         Grade: '-D',
+//         City: 'Nashik'
+//     }
+// };
+
+// Array of objects
+let arr = [
+    {
+        Name: 'Mantresh',
+        Age: 20,
+        City: 'London'
+    },
+    {
+        Name: 'Bise',
+        Age: 21,
         City: 'Nashik'
     },
-    Vky: {
-        Grade: '-D',
-        City: 'Nashik'
+    {
+        Name: 'Pakya',
+        Age: 100,
+        City: 'Mumbai'
     }
-};
+]
