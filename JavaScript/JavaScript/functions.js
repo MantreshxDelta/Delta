@@ -64,12 +64,28 @@ function helo() {
 // }
 
 // Higher order functions
-function multiplegreet(func, count) {
-    for (let i=0; i<count; i++) {
-        func();
+// function multiplegreet(func, count) {
+//     for (let i=0; i<count; i++) {
+//         func();
+//     }
+// }
+// let greet = function(){
+//     console.log('Hello!');
+// }
+// multiplegreet(greet, 1000)
+
+// Odd or even
+function oddorevenfactory(req) {
+    if (req == 'odd') {
+        return function(n) {
+            console.log(!(n%2==0));
+        }
     }
+    else if (req == 'even') {
+        return function(n) {
+            console.log(n%2==0);
+        }
+    }
+    else {console.log('wrong function')}
 }
-let greet = function(){
-    console.log('Hello!');
-}
-multiplegreet(greet, 1000)
+let req = 'odd'
