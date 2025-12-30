@@ -84,16 +84,32 @@
 // getelements(arr, num);
 
 // Q2
-let str = 'abcdabcdefgggh';
+// let str = 'abcdabcdefgggh';
 
-function unique(str){
-    let ans = '';
-    for (let i=0; i<str.length; i++){
-        let currchar = str[i];
-        if (ans.indexOf(currchar)== -1){
-            ans+=currchar;
+// function unique(str){
+//     let ans = '';
+//     for (let i=0; i<str.length; i++){
+//         let currchar = str[i];
+//         if (ans.indexOf(currchar)== -1){
+//             ans+=currchar;
+//         }
+//     }
+//     return ans;
+// }
+// unique(str);
+
+// Q3
+let country = ["Australia","Germany","UnitedStatesofAmerica"];
+
+function longname(country) {
+    let ansIdx = 0;
+    for (let i=0; i<country.length; i++){
+        let ansLen = country[ansIdx].length;
+        let curLen = country[i].length;
+        if (curLen > ansLen){
+            ansIdx = i;
         }
     }
-    return ans;
+    return country[ansIdx];
 }
-unique(str);
+longname(country);
