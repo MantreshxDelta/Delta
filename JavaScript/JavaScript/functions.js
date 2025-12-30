@@ -75,17 +75,17 @@ function helo() {
 // multiplegreet(greet, 1000)
 
 // Odd or even
-function oddorevenfactory(req) {
-    if (req == 'odd') {
-        return function(n) {
-            console.log(!(n%2==0));
-        }
-    }
-    else if (req == 'even') {
-        return function(n) {
-            console.log(n%2==0);
-        }
-    }
-    else {console.log('wrong function')}
-}
-let req = 'odd'
+// function oddorevenfactory(req) {
+//     if (req == 'odd') {
+//         return function(n) {
+//             console.log(!(n%2==0));
+//         }
+//     }
+//     else if (req == 'even') {
+//         return function(n) {
+//             console.log(n%2==0);
+//         }
+//     }
+//     else {console.log('wrong function')}
+// }
+// let req = 'odd'
