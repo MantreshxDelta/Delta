@@ -33,3 +33,10 @@
 // };
 
 // const mul = (a, b) => a * b;
+
+// Function timeout
+console.log('Hi there');
+setTimeout(() => {
+    console.log('Apna college');
+}, 4000);
+console.log('Welcome to');
