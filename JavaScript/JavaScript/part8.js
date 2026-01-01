@@ -53,6 +53,17 @@
 // })
 
 // Reduce
-let arr = [2,3,4,1];
+// let arr = [2,3,4,1];
 
-let reducee = arr.reduce((res, el) => res + el)
+// let reducee = arr.reduce((res, el) => res + el)
+
+// let arr = [1,2,3,4,5];
+// let max = arr.reduce((max, el) => {
+//     if (max < el) {
+//         return el;
+//     } else {
+//         return max;
+//     }
+// })
+
+// console.log(max);
