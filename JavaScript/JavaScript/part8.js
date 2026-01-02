@@ -1,4 +1,5 @@
 // For each
+
 // let arr = [1,2,3,4];
 
 // arr.forEach((el) => {
@@ -46,6 +47,7 @@
 // })
 
 // Filter 
+
 // let arr = [1,2,3,4,5,6,7,8];
 
 // let filter = arr.filter((el) => {
@@ -53,6 +55,7 @@
 // })
 
 // Reduce
+
 // let arr = [2,3,4,1];
 
 // let reducee = arr.reduce((res, el) => res + el)
@@ -92,12 +95,37 @@
 // let datacopy = {...data, id:123}
 
 // Arguments
-function sum(...args){
-    for (let i=0; i<args.length; i++) {
-        console.log("You gave us:", args[i]);
-    }
-}
+// function sum(...args){
+//     for (let i=0; i<args.length; i++) {
+//         console.log("You gave us:", args[i]);
+//     }
+// }
 
-function min(a,b,c,d) {
-    console.log(arguments);
-}
+// function min(a,b,c,d) {
+//     console.log(arguments);
+// }
+
+// function sum(...args) {
+//     return args.reduce((sum, el) => sum + el);
+// }
+
+// function sum(...args) {
+//     return args.reduce((sum, el) => {
+//         if (sum > el) {
+//             return el;
+//         } else {return sum};
+//     });
+// }
+
+// Destructuring 
+// let arr = ['ramesh','pakya','charan','manglu'];
+// let [onewinner, secondwinner] = arr;
+// console.log(onewinner);
+
+// const details = {
+//     name: 'Mantresh',
+//     place: 'LDN'
+// }
+// let {name, place: loacation = "BSL" } = details;
+
+// Qs
