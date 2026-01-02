@@ -1,8 +1,24 @@
-document.getElementById("mainImg")
-let imgobj = document.getElementById("mainImg")
-console.dir(imgobj.src)
+// document.getElementById("mainImg")
+// let imgobj = document.getElementById("mainImg")
+// console.dir(imgobj.src)
 
 // imgobj.src = "..//assets/creation_1.png"
 
-document.getElementById("description")
-console.dir(document.getElementById('description'))
+// document.getElementById("description")
+// console.dir(document.getElementById('description'))
+
+// Class name
+
+// document.getElementsByClassName('oldImg');
+// console.dir(document.getElementsByClassName("oldImg"))
+
+// document.getElementsByClassName('oldImg'.classList);
+// console.dir(document.getElementsByClassName('oldImg').src)
+
+// document.getElementsByClassName('oldImg')
+// console.dir(document.getElementsByClassName('oldImg'))
+
+// let source = document.getElementsByClassName('oldImg');
+// for (i=0; i<source.length; i++) {
+//     console.log(document.getElementsByClassName('oldImg')[i])
+// }
