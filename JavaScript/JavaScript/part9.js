@@ -22,3 +22,7 @@
 // for (i=0; i<source.length; i++) {
 //     console.log(document.getElementsByClassName('oldImg')[i])
 // }
+
+// Tag Names
+document.getElementsByTagName('p');
+console.dir(document.getElementsByTagName('p'))
