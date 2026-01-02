@@ -90,3 +90,14 @@
 // }
 
 // let datacopy = {...data, id:123}
+
+// Arguments
+function sum(...args){
+    for (let i=0; i<args.length; i++) {
+        console.log("You gave us:", args[i]);
+    }
+}
+
+function min(a,b,c,d) {
+    console.log(arguments);
+}
