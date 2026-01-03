@@ -63,10 +63,23 @@
 // If it is applied then it will remove that property and if not then add it
 
 // Adding elements on the page
-let newp = document.createElement('p');
-newp.innerText = 'Hi I am a p';
+// let newp = document.createElement('p');
+// newp.innerText = 'Hi I am a p';
 
 // Adding it inside html
 
-let body = document.querySelector('body');
-body.appendChild(newp);
+// let body = document.querySelector('body');
+// body.appendChild(newp);
+
+// Button property
+
+// let btn = document.createElement('button')
+// btn.innerText = 'Click me'
+
+// box.appendChild(btn)
+
+
+// append adds to last
+// prepend adds to the first
+
+// Insert adjacent element
