@@ -30,3 +30,8 @@ body {
 .green {
     color: green;
 }
+
+.box2 {
+    background-color: yellow;
+    border: 1px solid black;
+}

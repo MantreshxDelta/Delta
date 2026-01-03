@@ -29,4 +29,12 @@ h3.innerHTML= 'Hi I am blue h3'
 h3.style.color = 'blue'
 document.querySelector('body').append(h3)
 
-
+let div = document.createElement('div')
+let h1 = document.createElement('h1')
+let p = document.createElement('p')
+h1.innerText = 'I am in a div'
+p.innerText = 'Me too!!'
+div.append(h1)
+div.append(p)
+div.classList.add('box2')
+document.querySelector('body').append(div)
