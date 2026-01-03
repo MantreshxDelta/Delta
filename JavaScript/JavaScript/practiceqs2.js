@@ -17,3 +17,16 @@ let person = {
     City: 'Navi Mumbai'
 }
 console.log(person);
+
+// Random practice
+let para = document.createElement('p')
+para.innerHTML = 'Hi I am red'
+document.querySelector('body').append(para)
+para.style.color = 'red'
+
+let h3 = document.createElement('h3')
+h3.innerHTML= 'Hi I am blue h3'
+h3.style.color = 'blue'
+document.querySelector('body').append(h3)
+
+
