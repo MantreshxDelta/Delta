@@ -84,3 +84,23 @@
 // p.addEventListener('click', changecolor);
 
 // Keyboard events
+// let btn = document.querySelector('button');
+// btn.addEventListener('click', function (event) {
+//     console.log(event);
+// })
+
+// Another event
+
+let input = document.querySelector('input');
+input.addEventListener('keydown', function(event){
+    console.log('key = ', event.code);
+    if (event.code == 'ArrowUp') {
+        console.log('forward')
+    } else if (event.code == "ArrowRight") {
+        console.log("Character moves right")
+    } else if (event.code == "ArrowDown") {
+        console.log('Character moves backward')
+    } else if (event.code == "ArrowLeft") {
+        console.log("Character moves left")
+    }
+})
