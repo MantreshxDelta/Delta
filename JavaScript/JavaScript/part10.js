@@ -113,15 +113,23 @@
 //     console.log(inp.value)
 // })
 
-let form = document.querySelector('form')
-form.addEventListener('submit', function(event){
-    event.preventDefault();
+// let form = document.querySelector('form')
+// form.addEventListener('submit', function(event){
+//     event.preventDefault();
     
-    let user = this.elements[0];
-    let password = this.elements[1];
+//     let user = this.elements[0];
+//     let password = this.elements[1];
 
-    console.log(user.value)
-    console.log(password.value)
+//     console.log(user.value)
+//     console.log(password.value)
 
-    console.log(`HI ${user.value}, this is your pass ${password.value}`)
+//     console.log(`HI ${user.value}, this is your pass ${password.value}`)
+// })
+
+let inp = document.querySelector('#text');
+let p = document.querySelector('p')
+
+inp.addEventListener('input', function(){
+    console.log(inp.value);
+    p.innerText = inp.value;
 })
