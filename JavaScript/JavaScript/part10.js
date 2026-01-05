@@ -126,10 +126,32 @@
 //     console.log(`HI ${user.value}, this is your pass ${password.value}`)
 // })
 
-let inp = document.querySelector('#text');
-let p = document.querySelector('p')
+// let inp = document.querySelector('#text');
+// let p = document.querySelector('p')
 
-inp.addEventListener('input', function(){
-    console.log(inp.value);
-    p.innerText = inp.value;
-})
+// inp.addEventListener('input', function(){
+//     console.log(inp.value);
+//     p.innerText = inp.value;
+// })
+
+// Event bubbling
+
+let div = document.querySelector('div');
+let ul = document.querySelector('ul');
+let lis = document.querySelectorAll('li');
+
+div.addEventListener('click', function(){
+    console.log('div was clicked');
+});
+
+ul.addEventListener('click', function(event){
+    event.stopPropagation();
+    console.log('ul was clicked');
+});
+
+for (li of lis) {
+    li.addEventListener('click', function (event) {
+      event.stopPropagation();
+      console.log('li was clicked');
+    });
+}

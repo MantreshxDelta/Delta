@@ -1,6 +1,6 @@
-body {
+/* body {
     text-align: center;
-}
+} */
 /* div {
     height: 200px;
     width: 100vh;
@@ -8,9 +8,22 @@ body {
     margin: auto;
 } */
 
-.ll {
+/* .ll {
     height: 100px;
     width: 100px;
     border: 1px solid black;
     background-color: pink;
+} */
+
+div {
+    height: 300px;
+    width: 500px;
+    background-color: pink;
+}
+li {
+    background-color: green;
+    height: 30px;
+}
+ul {
+    background-color: blue;
 }
