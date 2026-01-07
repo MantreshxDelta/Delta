@@ -11,33 +11,33 @@
 
 // Callback hell
 
-h1 = document.querySelector('h1');
+// h1 = document.querySelector('h1');
 
-function changecolor(color,delay) {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-        h1.style.color = color;
-        resolve("Color changed");
-    },delay);
-    });
-}
+// function changecolor(color,delay) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//         h1.style.color = color;
+//         resolve("Color changed");
+//     },delay);
+//     });
+// }
 
-changecolor('red', 1000)
-.then (() => {
-    console.log("red color was completed");
-    return changecolor("orange", 1000);
-})
-.then (() => {
-    console.log("Orange color completed");
-    return changecolor("green", 1000);
-})
-.then (() => {
-    console.log("green color was completed");
-    return changecolor("blue", 1000);
-})
-.then (() => {
-    console.log("Blue was completed");
-})
+// changecolor('red', 1000)
+// .then (() => {
+//     console.log("red color was completed");
+//     return changecolor("orange", 1000);
+// })
+// .then (() => {
+//     console.log("Orange color completed");
+//     return changecolor("green", 1000);
+// })
+// .then (() => {
+//     console.log("green color was completed");
+//     return changecolor("blue", 1000);
+// })
+// .then (() => {
+//     console.log("Blue was completed");
+// })
 
 // Promises
 // Worst case
@@ -94,3 +94,22 @@ changecolor('red', 1000)
 //     console.log("Promise was rejected")
 //     console.log(error);
 // })
+
+// Async function
+async function greet() {
+    // throw '404 Not found!' // throw is used for the error!!
+    return 'hello!'
+}
+
+greet()
+    .then((result) => {
+        console.log("Promise was ressolved")
+        console.log("Result was: ", result);
+    })
+    .catch((err) => {
+        console.log("error: ", err);
+    })
+
+let demo = async () => {
+    return 5;
+}
