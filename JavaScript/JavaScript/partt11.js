@@ -154,13 +154,33 @@
 // }
 
 // API
-let jsonRes = '{"fact":"Baking chocolate is the most dangerous chocolate to your cat.","length":61}'
+// let jsonRes = '{"fact":"Baking chocolate is the most dangerous chocolate to your cat.","length":61}'
 
-let validRes = JSON.parse(jsonRes);
-console.log(validRes.fact);
+// let validRes = JSON.parse(jsonRes);
+// console.log(validRes.fact);
 
-let student = {
-    name: 'Mantresh',
-    Marks: 95
-}
-console.log(JSON.stringify(student))
+// let student = {
+//     name: 'Mantresh',
+//     Marks: 95
+// }
+// console.log(JSON.stringify(student))
+
+let url = 'https://catfact.ninja/fact';
+fetch(url)
+.then ((res) => {
+    console.log(res);
+    return res.json();
+})
+.then((data) => {
+    console.log('Data1 = ', data.fact)
+    return fetch(url)
+})
+.then((res) => {
+    return res.json();
+})
+.then((data2) => {
+    console.log("Data2 = ", data2.fact)
+})
+.catch((err) => {
+    console.log(err)
+})
