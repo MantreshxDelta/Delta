@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+}
+.main {
+    height: 40px;
+    background-color: #242728;
+    display: flex;
+}
+
+.logoandsearch {
+    display: flex;
+    gap: 4px;
+    height: 40px;
+    width: 75px;
+    justify-content: center;
+    align-items: center;
+}
+
+.fb-back{
+    background-color: white;
+    height: 100%;
+    width: 100%;
+}
+.fb-icon {
+    font-size: 27px;
+    background: white;
+    color: #1877f2;
+    border-radius: 50%;
+    padding-left: 0.2px;
+}
+.srch-border {
+    background-color: #333334;
+    height: 27px;
+    width: 27px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.srch-icon {
+    font-size: 15px;
+    opacity: 0.7;
+}
+
+.middle-icons {
+    align-self: center;
+}
