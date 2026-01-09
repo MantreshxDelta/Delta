@@ -224,24 +224,55 @@
 
 
 // Dog API 
-let btn = document.querySelector('button');
-let url2 = 'https://dog.ceo/api/breeds/image/random';
+// let btn = document.querySelector('button');
+// let url2 = 'https://dog.ceo/api/breeds/image/random';
 
-btn.addEventListener('click', async() => {
-    let link = await getImage();
-    console.log(link);
-    let img = document.querySelector('#result');
-    img.setAttribute('src', link);
+// btn.addEventListener('click', async() => {
+//     let link = await getImage();
+//     console.log(link);
+//     let img = document.querySelector('#result');
+//     img.setAttribute('src', link);
+// });
+
+// async function getImage() {
+//     try {
+//         let res = await axios.get(url2);
+//         return res.data.message;
+//     } catch (err) {
+//         console.log('catch err', err);
+//         return '/';
+//     }
+// }
+
+let url = 'http://universities.hipolabs.com/search?name=';
+let btn = document.querySelector("button")
+
+btn.addEventListener('click', async () => {
+    let country = document.querySelector('input').value;
+    console.log(country);
+
+    let colArr = await getColleges(country);
+    show(colArr);
 });
 
-async function getImage() {
-    try {
-        let res = await axios.get(url2);
-        return res.data.message;
-    } catch (err) {
-        console.log('catch err', err);
-        return '/';
+function show(colArr) {
+    let list = document.querySelector("#list");
+    list.innerText = '';
+    for (let col of colArr) {
+        console.log(col.name);
+
+    let li = document.createElement("li");
+    li.innerText = col.name;
+    list.append(li);
     }
 }
 
-let url = 'http://universities.hipolabs.com/search?name='
+async function getColleges(country) {
+    try {
+        let res = await axios.get(url + country);
+        return res.data
+    } catch (e) {
+        console.log(e);
+        return [];
+    }
+}
