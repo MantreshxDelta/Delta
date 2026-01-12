@@ -1,3 +1,3 @@
-const math = require("./math");
+const info = require("Fruits");
 
-console.log(math.sum(1,2));
+console.log(info);
