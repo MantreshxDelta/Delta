@@ -33,8 +33,8 @@ button:disabled {
   cursor: not-allowed;
 } */
 
-body {
-    text-align: center;
+* {
+    /* text-align: center; */
 }
 
 /* #strength {
@@ -53,14 +53,23 @@ body {
 } */
 
 /* Light theme (default) */
-body {
+/* body {
   background: white;
   color: black;
   font-family: Arial, sans-serif;
 }
 
 /* Dark theme (when JS adds class="dark" on body) */
-body.dark {
+/* body.dark {
   background: black;
   color: white;
+} */ 
+
+.result {
+  height: 100px;
+  width: 100px;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }

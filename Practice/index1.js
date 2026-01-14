@@ -115,39 +115,61 @@
 //     return true;
 // };
 
-const themeBtn = document.getElementById('themeBtn');
+// const themeBtn = document.getElementById('themeBtn');
 
-const isDark = () => document.body.classList.contains("dark");
+// const isDark = () => document.body.classList.contains("dark");
 
-const updateButtonText = () => {
-    themeBtn.textContent = isDark() ? "☀️ Light Mode" : "🌙 Dark Mode";
-};
+// const updateButtonText = () => {
+//     themeBtn.textContent = isDark() ? "☀️ Light Mode" : "🌙 Dark Mode";
+// };
 
-const applyTheme = (theme) => {
-    if (theme === 'dark') {
-        document.body.classList.add('dark');
-    } else {
-        document.body.classList.remove('dark');
-    }
+// const applyTheme = (theme) => {
+//     if (theme === 'dark') {
+//         document.body.classList.add('dark');
+//     } else {
+//         document.body.classList.remove('dark');
+//     }
 
-    updateButtonText();
-    localStorage.setItem("theme", theme);
-};
+//     updateButtonText();
+//     localStorage.setItem("theme", theme);
+// };
 
-const loadTheme = () => {
-    const savedTheme = localStorage.getItem('theme');
+// const loadTheme = () => {
+//     const savedTheme = localStorage.getItem('theme');
 
-    if (savedTheme === 'dark'){
-        applyTheme("dark");
-    } else {
-        applyTheme("light");
-    }
-};
+//     if (savedTheme === 'dark'){
+//         applyTheme("dark");
+//     } else {
+//         applyTheme("light");
+//     }
+// };
 
-loadTheme();
+// loadTheme();
 
-const toggleTheme = () => {
-    applyTheme(isDark() ? "light" : "dark");
-};
+// const toggleTheme = () => {
+//     applyTheme(isDark() ? "light" : "dark");
+// };
 
-themeBtn.addEventListener('click', toggleTheme);
+// themeBtn.addEventListener('click', toggleTheme);
+
+// Number guessing game
+// const input = document.getElementById("input");
+// const result = document.getElementById("result");
+// const randomnumber = Math.floor(Math.random() * 100) + 1;
+
+// guess = 0;
+
+// input.addEventListener("input", function() {
+//     const userguess = Number(input.value);
+
+//     // Clear message if input is empty
+//     if(!input.value){
+//         result.textContent = "";
+//         return;
+//     }
+//     if (userguess>randomnumber) {
+//         result.textContent = "Too high!";
+//     } else if (userguess < randomnumber) {
+//         result.textContent = "Too low";
+//     } else {result.textContent = "Correct";}
+// });
