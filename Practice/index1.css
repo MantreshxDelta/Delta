@@ -33,10 +33,6 @@ button:disabled {
   cursor: not-allowed;
 } */
 
-* {
-    /* text-align: center; */
-}
-
 /* #strength {
     font-weight: bold;
 } */
@@ -65,11 +61,18 @@ button:disabled {
   color: white;
 } */ 
 
+.main {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  /* align-items: center; */
+}
+
 .result {
   height: 100px;
   width: 100px;
   border: 2px solid black;
-  display: flex;
-  justify-content: center;
-  text-align: center;
 }
