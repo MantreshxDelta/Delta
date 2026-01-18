@@ -1,78 +1,8 @@
-/* body {
-    font-family: Arial;
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-}
-.counter-box {
+* {
+  margin: 0;
   text-align: center;
 }
-
-h1 {
-  font-size: 60px;
-  margin-bottom: 10px;
-}
-
-.red {
-  color: red;
-}
-
-.green {
-  color: green;
-}
-
-button {
-  padding: 10px 20px;
-  font-size: 18px;
-  margin: 5px;
-  cursor: pointer;
-}
-
-button:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-} */
-
-/* #strength {
-    font-weight: bold;
-} */
-
-
-/* .green {
-  color: darkgreen;
-}
-.red {
-  color: maroon;
-}
-.count{
-  font-weight: bolder;
-} */
-
-/* Light theme (default) */
-/* body {
-  background: white;
-  color: black;
-  font-family: Arial, sans-serif;
-}
-
-/* Dark theme (when JS adds class="dark" on body) */
-/* body.dark {
-  background: black;
-  color: white;
-} */ 
-
-/* .main {
-  margin: 0;
+.main {
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  /* align-items: center; */
-/* } */
-
-/* .result {
-  height: 100px;
-  width: 100px;
-  border: 2px solid black;
-} */
+  width: 100%;
+}
