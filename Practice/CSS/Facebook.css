@@ -6,10 +6,15 @@
     height: 56px;   /* Original height = 56px Normally it's 40px*/
     width: 100%;
     background-color: #242728;
-    display: flex;
-    justify-content: space-between;
+    /* display: flex; */
+    /* justify-content: space-between; */
     padding: 0 12px;
     align-items: center;
+
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto; /* left | middle | right */
+    align-items: center;
+    column-gap: 12px;
 }
 
 /* Left Section */
@@ -21,6 +26,8 @@
     justify-content: center;
     align-items: center;
     gap: 5px;   /* Original gap = 8px but my gap = 5px*/
+    flex: 0 1 auto;
+    min-width: 0;
 }
 .fb-icon {
     font-size: 40px;
@@ -37,6 +44,8 @@
     padding: 0 12px;
     background-color: #3a3b3c;
     border-radius: 999px;
+    flex: 0 1 auto;
+    min-width: 0;
 }
 .nav-search-icon {
     color: #b0b3b8;
@@ -49,6 +58,8 @@
     background: transparent;
     color: #e4e6eb;
     font-size: 15px;
+    flex: 1 1 auto;
+    min-width: 0;
 }
 .nav-search::placeholder {
     color: #b0b3b8;
@@ -59,12 +70,24 @@
 .navbar-mid {
     /* display: flex; */
     /* background-color: yellow; */
-    margin-left: auto;
-    margin-right: 340px;
-    gap: 110px;
+    /* margin-left: auto; */
+    /* margin-right: 340px; */
+    /* gap: 110px; */
+
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 1 1 auto;
+    min-width: 0;
+    gap: clamp(14px, 6vw, 110px); */
+
+    justify-self: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: clamp(14px, 6vw, 110px);
+    min-width: 0;
 }
 .nav-center-icon {
     font-size: 24px;
@@ -94,4 +117,32 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media (max-width: 760px) {
+    .navbar-mid .nav-center-icon:nth-child(5),
+    .navbar-mid .nav-center-icon:nth-child(4){
+    display: none;
+  }
+}
+
+@media (max-width: 640px){
+  .navbar-mid .nav-center-icon:nth-child(3){
+    display: none;
+  }
+}
+
+@media (max-width: 1259px){
+  .nav-search-wrap{
+    width: 39px;
+    padding: 0;
+    justify-content: center;
+    gap: 0;
+  }
+  .nav-search{
+    width: 0;
+    flex: 0 0 0;
+    opacity: 0;
+    pointer-events: none;
+  }
 }
