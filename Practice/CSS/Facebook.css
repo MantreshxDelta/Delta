@@ -149,3 +149,24 @@
         gap: clamp(8px, 5vw, 60px);
     }
 }
+
+.maintwo {
+    height: 100vh;
+    width: 100%;
+    background-color: #1c1c1d;
+}
+
+.left-sidebar {
+    height: 895px;
+    width: 280px;
+    background-color: yellow;
+    display: flex;
+    padding: 8px;
+    margin: -6px;
+}
+
+.side-content {
+    height: 48px;
+    width: 260px;
+    background-color: darkgreen;
+}
