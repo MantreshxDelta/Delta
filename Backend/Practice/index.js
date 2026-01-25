@@ -7,8 +7,14 @@ app.listen(port, () => {
     console.log(`Listening to port ${port}`)
 })
 
-app.get("/home", (req, res) => {
-    console.log("New incomming request")
-    let code = "<h1>Fruits</h1>"
-    res.send(code)
+// app.get("/:home", (req, res) => {
+//     console.log("New incomming request")
+//     let code = "<h1>Fruits</h1>"
+//     res.send(code)
+// })
+
+app.get("/:username/:id", (req, res) => {
+    let {username, id} = req.params
+    res.send(`this is the page of @${username}`)
 })
+
