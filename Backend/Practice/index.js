@@ -3,6 +3,8 @@ const app = express()
 
 let port = 3000
 
+app.set("view engine", "ejs");
+
 app.listen(port, () => {
     console.log(`Listening to port ${port}`)
 })
@@ -12,6 +14,9 @@ app.listen(port, () => {
 //     let code = "<h1>Fruits</h1>"
 //     res.send(code)
 // })
+app.get("/", (req, res) => {
+    res.render("home.ejs")
+})
 
 app.get("/:username", (req, res) => {
     let {username} = req.params;
