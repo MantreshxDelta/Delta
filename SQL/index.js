@@ -1,6 +1,6 @@
-const { faker } = require('@faker-js/faker');
+import {faker} from '@faker-js/faker'
 // Get the client
-import mysql from 'mysql2/promise';
+import mysql from 'mysql2/promise'
 
 // Create the connection to database
 const connection = await mysql.createConnection({
@@ -11,13 +11,15 @@ const connection = await mysql.createConnection({
 });
 
 try {
-  connection.query("SHOW TABLES", (err, result) => {
-    if(err) throw err;
-    console.log(result)
-  })
-} catch (err) {
-  console.log(err)
+  const [rows] = await connection.query("SHOW TABLES");
+  console.log(rows);
+  } catch (err) {
+    console.log(err)
+} finally {
+  await connection.end();
 }
+
+connection.end();
 
 let getRandomUser= () => {
   return {
