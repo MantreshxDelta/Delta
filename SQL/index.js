@@ -23,30 +23,24 @@ let getRandomUser = () => {
 //   data.push([user.id, user.username, user.email, user.password]);
 // }
 
-async function main() {
-  // Create the connection to database
-  const connection = await mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    database: "delta_app",
-    password: "SDE@f66ng",
-  });
+// Create a pool so routes can run queries without reconnecting each time.
+const pool = mysql.createPool({
+  host: "localhost",
+  user: "root",
+  database: "delta_app",
+  password: "SDE@f66ng",
+});
 
-app.get("/", async(req, res) => {
-  let q = `SELECT count(*) FROM user`;
+app.get("/", async (req, res) => {
+  const q = "SELECT COUNT(*) AS count FROM `user`";
   try {
-      const [result] = await connection.query(q, [data]);
-      console.log("Inserted:", result.affectedRows);
-    } catch (err) {
-      console.log(err);
-    } finally {
-      await connection.end();
-      res.send("App is working")
-    }
+    const [rows] = await pool.query(q);
+    res.json({ message: "App is working", count: rows[0].count });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Database query failed" });
   }
-)};
-
-main().catch((err) => console.error(err));
+});
 
 app.listen(port, () => {
   console.log("Listening to port 8080");
