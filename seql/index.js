@@ -5,6 +5,51 @@ const app = express();
 
 const port = 8080;
 
+app.get("/", (req, res) => {
+    let q = `SELECT count(*) FROM user`
+    try{
+    connection.query(q, (err, result) => {
+        if(err) throw err;
+        let count = result[0]["count(*)"]
+        res.render("home.ejs", {count})
+    })
+} catch (err) {
+    console.log(err)
+    res.send("Some error in DB")
+}
+});
+
+app.get("/:user", (req, res) => {
+    let q = `SELECT * FROM user`
+    try{
+    connection.query(q, (err, result) => {
+        if(err) throw err;
+        console.log(result)
+        res.send(result)
+    })
+} catch (err) {
+    console.log(err)
+    res.send("Some error in DB")
+}
+});
+
+app.get("/:user/data", (req, res) => {
+    let q = `SELECT count(*) FROM user`
+    try{
+    connection.query(q, (err, users) => {
+        if(err) throw err;
+        res.render("showusers.ejs", {users})
+    })
+} catch (err) {
+    console.log(err)
+    res.send("Some error in DB")
+}
+})
+
+app.listen(port, () => {
+    console.log(`server listening on port ${port}`);
+});
+
 const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
@@ -21,24 +66,4 @@ let getRandomUser = () => {
   ];
 }
 
-let q = "INSERT INTO `user` (id, username, email, password) VALUES ?";
-
-let data = [];
-for(let i=1; i<=100; i++) {
-    data.push(getRandomUser())
-}
-
 // connection.end();
-
-try{
-    connection.query(q, [data], (err, result) => {
-        if(err) throw err;
-        console.log(result)
-    })
-} catch (err) {
-    console.log(err)
-}
-
-app.listen("/", (req, res) => {
-    res.send
-})
